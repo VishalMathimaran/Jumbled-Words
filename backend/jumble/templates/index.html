@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% block title %}<title>Jumbled Words</title>{% endblock %}
+  </head>
+  <body>
+    <h1>Hello  World</h1>
+    <form class="" action="{% url 'jumble' %}" method="post">{% csrf_token %}
+      <label for="">Name:</label>
+      <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+      <a href="{% url 'jumble' %}">Home</a>
+    </form>
+  </body>
+</html>
