@@ -6,7 +6,8 @@ import numpy as np
 from django.http import JsonResponse
 from collections import Counter
 def index(request):
-    if request.method == 'POST':
+    if request.method == 'POST': 
+        
         form = NameForm(request.POST)
         if form.is_valid():
             print(form.cleaned_data["your_name"])
